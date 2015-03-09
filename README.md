@@ -3,6 +3,8 @@
 [![Build Status](http://img.shields.io/travis/jarofghosts/melvin.svg?style=flat)](https://travis-ci.org/jarofghosts/melvin)
 [![npm install](http://img.shields.io/npm/dm/melvin.svg?style=flat)](https://www.npmjs.org/package/melvin)
 
+![Melvin](melvin.jpg)
+
 file mutation stream
 
 ## what
