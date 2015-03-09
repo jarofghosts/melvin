@@ -43,6 +43,8 @@ function toUpperCase(file, x, next) {
   file.data = file.data.toString().toUpperCase()
 
   this.push(file)
+
+  next()
 }
 ```
 
