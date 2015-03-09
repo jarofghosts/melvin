@@ -5,14 +5,12 @@ var writeFiles = require('./lib/write-files')
 
 module.exports = melvin
 
-function melvin(source, _opts) {
-  var opts = _opts || {}
-
+function melvin(source, _dirFilter) {
   if(!source) {
     return writeFiles()
   }
 
-  var readable = readFiles(source, opts)
+  var readable = readFiles(source, _dirFilter)
   var writable = writeFiles()
 
   return duplex.obj(writable, readable)
