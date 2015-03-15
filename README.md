@@ -53,14 +53,21 @@ and contents all upper-cased.
 
 ## API
 
-`melvin([sourceDir, ] [dirFilter]) -> Stream`
+`melvin([sourceDir, ] [dirFilter, ] [fileFilter]) -> Stream`
 
 * `sourceDir` is the directory to read files from. If not provided, no
   directories will be read and the return value will be simply a Writable
   stream. Otherwise, a Duplex stream will be returned.
 * `dirFilter` is a function that will be called on every encountered directory
-  to determine whether or not to descend into it. If not provided, no recursion
-  will occur.
+  to determine whether or not to descend into it. If not provided, every
+  directory will be recursed into.
+* `fileFilter` is a function that will be called with every file encountered
+  to determine whether or not to read the file and emit its contents. If not
+  provided, every file will be read.
+
+### Notes
+
+* The filter functions must operate synchronously.
 
 ### File Objects
 
@@ -70,7 +77,7 @@ this:
 ```js
 {
     filename: String
-  , data: Buffer|String
+  , data: Buffer | String
 }
 ```
 
