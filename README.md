@@ -33,7 +33,7 @@ var fileStream = melvin(process.cwd())
 
 fileStream.pipe(through.obj(toUpperCase)).pipe(fileStream)
 
-function toUpperCase(file, x, next) {
+function toUpperCase (file, x, next) {
   var basename = path.basename(file.filename)
 
   file.filename = path.resolve(
