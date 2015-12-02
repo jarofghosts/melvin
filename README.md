@@ -27,7 +27,7 @@ instead.
 var path = require('path')
 
 var through = require('through2')
-  , melvin = require('melvin')
+var melvin = require('melvin')
 
 var fileStream = melvin(process.cwd())
 
@@ -37,10 +37,10 @@ function toUpperCase(file, x, next) {
   var basename = path.basename(file.filename)
 
   file.filename = path.resolve(
-      process.cwd()
-    , '..'
-    , 'transformed'
-    , basename.toUpperCase()
+    process.cwd(),
+    '..',
+    'transformed',
+    basename.toUpperCase()
   )
 
   file.data = file.data.toString().toUpperCase()
@@ -79,8 +79,8 @@ this:
 
 ```js
 {
-    filename: String
-  , data: Buffer | String
+  filename: String,
+  data: Buffer | String
 }
 ```
 
