@@ -4,17 +4,19 @@
   "description": "mutate files",
   "main": "index.js",
   "dependencies": {
-    "duplexify": "^3.2.0",
-    "graceful-fs": "^3.0.5",
-    "mkdirp": "^0.5.0",
-    "through2": "^0.6.3"
+    "duplexify": "3.2.0",
+    "graceful-fs": "4.1.2",
+    "mkdirp": "0.5.0",
+    "through2": "0.6.3"
   },
   "devDependencies": {
-    "rimraf": "^2.3.1",
-    "tape": "^4.0.0"
+    "rimraf": "2.3.1",
+    "standard": "5.4.1",
+    "tape": "4.0.0"
   },
   "scripts": {
-    "test": "tape test/*"
+    "lint": "standard index.js lib/*.js test/*.js",
+    "test": "tape test/* && npm run lint"
   },
   "repository": {
     "type": "git",

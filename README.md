@@ -1,7 +1,10 @@
 # melvin
 
-[![Build Status](http://img.shields.io/travis/jarofghosts/melvin.svg?style=flat)](https://travis-ci.org/jarofghosts/melvin)
-[![npm install](http://img.shields.io/npm/dm/melvin.svg?style=flat)](https://www.npmjs.org/package/melvin)
+[![Build Status](http://img.shields.io/travis/jarofghosts/melvin.svg?style=flat-square)](https://travis-ci.org/jarofghosts/melvin)
+[![npm install](http://img.shields.io/npm/dm/melvin.svg?style=flat-square)](https://www.npmjs.org/package/melvin)
+[![npm version](https://img.shields.io/npm/v/melvin.svg?style=flat-square)](https://www.npmjs.org/package/melvin)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![License](https://img.shields.io/npm/l/melvin.svg?style=flat-square)](https://github.com/jarofghosts/melvin/blob/master/LICENSE)
 
 ![Melvin](melvin.jpg)
 

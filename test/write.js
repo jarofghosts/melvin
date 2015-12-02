@@ -1,16 +1,16 @@
 var path = require('path')
-  , os = require('os')
-  , fs = require('fs')
+var os = require('os')
+var fs = require('fs')
 
 var mkdirp = require('mkdirp')
-  , rimraf = require('rimraf')
-  , test = require('tape')
+var rimraf = require('rimraf')
+var test = require('tape')
 
 var melvin = require('../')
 
 var tmp = os.tmpdir()
 
-test('writes files to disk', function(t) {
+test('writes files to disk', function (t) {
   t.plan(2)
 
   var src = path.join(tmp, 'src')
@@ -19,7 +19,7 @@ test('writes files to disk', function(t) {
 
   var melvinStream = melvin()
 
-  melvinStream.on('written', function(filename) {
+  melvinStream.on('written', function (filename) {
     t.equal(filename, path.join(src, 'file.txt'))
     t.deepEqual(fs.readFileSync(filename), new Buffer('lol'))
 
@@ -27,7 +27,7 @@ test('writes files to disk', function(t) {
   })
 
   melvinStream.write({
-      filename: path.join(src, 'file.txt')
-    , data: new Buffer('lol')
+    filename: path.join(src, 'file.txt'),
+    data: new Buffer('lol')
   })
 })

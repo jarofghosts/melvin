@@ -1,15 +1,15 @@
 var duplex = require('duplexify')
 
 var writeFiles = require('./lib/write-files')
-  , readFiles = require('./lib/read-files')
+var readFiles = require('./lib/read-files')
 
 module.exports = melvin
 
-function melvin(source, _dirFilter, _fileFilter) {
+function melvin (source, _dirFilter, _fileFilter) {
   var writable = writeFiles()
-    , readable
+  var readable
 
-  if(!source) {
+  if (!source) {
     return writable
   }
 
